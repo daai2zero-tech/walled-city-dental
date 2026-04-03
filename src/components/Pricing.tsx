@@ -59,7 +59,7 @@ export default function Pricing() {
         </div>
 
         {/* Pricing cards */}
-        <div className="pricing-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '20px', alignItems: 'start' }}>
+        <div className="pricing-grid" style={{ gap: '20px' }}>
           {plans.map((plan, i) => (
             <div key={plan.name} className={`reveal d${i + 1}`} style={{
               background: plan.highlight ? 'linear-gradient(135deg, rgba(0,212,177,0.15) 0%, rgba(0,212,177,0.05) 100%)' : 'rgba(255,255,255,0.04)',

@@ -38,7 +38,7 @@ export default function Contact() {
           </h2>
         </div>
 
-        <div className="contact-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1.4fr', gap: '80px', alignItems: 'start' }}>
+        <div className="contact-grid" style={{ gap: '80px' }}>
 
           {/* Left: info */}
           <div className="reveal-left">
@@ -69,7 +69,7 @@ export default function Contact() {
               border: '1px solid rgba(255,255,255,0.08)',
               borderRadius: '24px', padding: '40px 36px',
             }}>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', marginBottom: '16px' }}>
+              <div className="form-row" style={{ marginBottom: '16px' }}>
                 {['First name', 'Last name'].map(p => (
                   <input key={p} placeholder={p} style={inputStyle}
                     onFocus={e => (e.target.style.borderColor = 'rgba(0,212,177,0.5)')}

@@ -34,7 +34,7 @@ export default function Team() {
         </div>
 
         {/* Team grid */}
-        <div className="team-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '16px' }}>
+        <div className="team-grid" style={{ gap: '16px' }}>
           {team.map((member, i) => (
             <div key={member.name} className={`reveal d${i + 1}`} style={{ position: 'relative' }}>
               <div className="team-card img-zoom" style={{

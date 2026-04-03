@@ -36,9 +36,6 @@ export default function Hero() {
       <div className="hero-grid" style={{
         maxWidth: '1200px', margin: '0 auto', padding: '60px 24px',
         width: '100%',
-        display: 'grid',
-        gridTemplateColumns: '1fr 1fr',
-        gap: '80px',
         alignItems: 'center',
         position: 'relative', zIndex: 1,
       }}>
@@ -145,7 +142,7 @@ export default function Hero() {
           </div>
 
           {/* Floating card: GDC */}
-          <div className="glass" style={{
+          <div className="glass mobile-hide" style={{
             position: 'absolute', bottom: '40px', left: '-10px', zIndex: 3,
             padding: '16px 20px',
           }}>
@@ -154,7 +151,7 @@ export default function Hero() {
           </div>
 
           {/* Floating card: Free consultation */}
-          <div style={{
+          <div className="mobile-hide" style={{
             position: 'absolute', top: '50px', right: '-10px', zIndex: 3,
             background: '#00d4b1', borderRadius: '16px', padding: '16px 20px',
             boxShadow: '0 8px 32px rgba(0,212,177,0.4)',
@@ -164,7 +161,7 @@ export default function Hero() {
           </div>
 
           {/* Floating rating badge */}
-          <div className="glass" style={{
+          <div className="glass mobile-hide" style={{
             position: 'absolute', top: '180px', right: '-30px', zIndex: 3,
             padding: '12px 16px', borderRadius: '14px',
             display: 'flex', alignItems: 'center', gap: '10px',

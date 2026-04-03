@@ -49,7 +49,7 @@ export default function TreatmentTabs() {
       </div>
 
       {/* Cards */}
-      <div className="treatments-grid" style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 24px', display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '14px' }}>
+      <div className="treatments-grid" style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 24px', gap: '14px' }}>
         {treatments.map((t, i) => (
           <div key={t.name} className={`reveal treatment-card card-lift d${i + 1}`} style={{ position: 'relative', height: '440px', borderRadius: '20px', overflow: 'hidden', cursor: 'pointer', boxShadow: '0 8px 40px rgba(0,0,0,0.4)' }}>
             <img src={t.image} alt={t.name} style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.65s ease' }} />

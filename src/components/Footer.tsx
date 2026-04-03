@@ -11,7 +11,7 @@ export default function Footer() {
   return (
     <footer style={{ background: '#13161c', borderTop: '1px solid rgba(0,212,177,0.1)', padding: '60px 24px 40px' }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-        <div className="footer-grid" style={{ display: 'grid', gridTemplateColumns: '1.5fr 1fr 1fr', gap: '60px', marginBottom: '60px' }}>
+        <div className="footer-grid" style={{ gap: '60px', marginBottom: '60px' }}>
 
           {/* Brand */}
           <div>
@@ -54,7 +54,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div style={{ borderTop: '1px solid rgba(255,255,255,0.06)', paddingTop: '24px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px' }}>
+        <div className="footer-bottom" style={{ borderTop: '1px solid rgba(255,255,255,0.06)', paddingTop: '24px' }}>
           <p style={{ fontFamily: 'Outfit', fontSize: '12px', color: 'rgba(255,255,255,0.2)' }}>
             &copy; 2025 Walled City Dental & Aesthetics. All rights reserved.
           </p>

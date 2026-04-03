@@ -92,7 +92,7 @@ export default function WhyChooseUs() {
         </div>
 
         {/* Big stat row */}
-        <div className="reveal" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1px', background: 'rgba(0,212,177,0.15)', borderRadius: '20px', overflow: 'hidden', marginBottom: '80px' }}>
+        <div className="reveal why-stats" style={{ gap: '1px', background: 'rgba(0,212,177,0.15)', borderRadius: '20px', overflow: 'hidden', marginBottom: '80px' }}>
           {[
             { num: '500+', label: 'Happy Patients', sub: 'and counting' },
             { num: '10+', label: 'Years Experience', sub: 'in the city' },
@@ -107,7 +107,7 @@ export default function WhyChooseUs() {
         </div>
 
         {/* Features grid */}
-        <div className="why-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }}>
+        <div className="why-grid" style={{ gap: '24px' }}>
           {features.map((f, i) => (
             <div key={f.title} className={`reveal card-lift d${i + 1}`} style={{
               background: '#f8fffe',
