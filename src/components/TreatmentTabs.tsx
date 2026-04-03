@@ -21,15 +21,15 @@ export default function TreatmentTabs() {
   }, [])
 
   return (
-    <section id="treatments" ref={sectionRef} style={{ background: '#0d1f35', paddingBottom: '100px', overflow: 'hidden' }}>
+    <section id="treatments" ref={sectionRef} style={{ background: '#181c24', paddingBottom: '100px', overflow: 'hidden' }}>
       {/* Ticker */}
       <div style={{ background: '#00d4b1', overflow: 'hidden', padding: '14px 0', whiteSpace: 'nowrap' }}>
         <div className="ticker-track">
           {[...Array(2)].map((_, ri) => (
             <span key={ri} style={{ display: 'inline-flex' }}>
               {['Teeth Whitening', 'Invisalign', 'Composite Veneers', 'Dental Implants', 'Dermal Fillers', 'Skin Boosters', 'Hygiene', 'Anti-Wrinkle'].map(s => (
-                <span key={s} style={{ fontFamily: 'Outfit', fontWeight: 700, fontSize: '12px', color: '#0a1628', letterSpacing: '0.12em', textTransform: 'uppercase', padding: '0 28px' }}>
-                  {s}&nbsp;&nbsp;<span style={{ opacity: 0.3 }}>✦</span>
+                <span key={s} style={{ fontFamily: 'Outfit', fontWeight: 700, fontSize: '12px', color: '#1c2028', letterSpacing: '0.12em', textTransform: 'uppercase', padding: '0 28px' }}>
+                  {s}&nbsp;&nbsp;<span style={{ opacity: 0.3 }}>&#10022;</span>
                 </span>
               ))}
             </span>
@@ -54,10 +54,10 @@ export default function TreatmentTabs() {
           <div key={t.name} className={`reveal treatment-card card-lift d${i + 1}`} style={{ position: 'relative', height: '440px', borderRadius: '20px', overflow: 'hidden', cursor: 'pointer', boxShadow: '0 8px 40px rgba(0,0,0,0.4)' }}>
             <img src={t.image} alt={t.name} style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.65s ease' }} />
             <div className="treatment-overlay">
-              <div style={{ display: 'inline-block', background: '#00d4b1', color: '#0a1628', fontFamily: 'Outfit', fontWeight: 700, fontSize: '10px', letterSpacing: '0.12em', textTransform: 'uppercase', padding: '4px 12px', borderRadius: '100px', marginBottom: '12px', alignSelf: 'flex-start' }}>{t.tag}</div>
+              <div style={{ display: 'inline-block', background: '#00d4b1', color: '#1c2028', fontFamily: 'Outfit', fontWeight: 700, fontSize: '10px', letterSpacing: '0.12em', textTransform: 'uppercase', padding: '4px 12px', borderRadius: '100px', marginBottom: '12px', alignSelf: 'flex-start' }}>{t.tag}</div>
               <h3 style={{ fontFamily: 'Outfit', fontWeight: 800, fontSize: '21px', color: 'white', marginBottom: '8px', letterSpacing: '-0.01em' }}>{t.name}</h3>
               <p style={{ fontFamily: 'Outfit', fontSize: '13px', color: 'rgba(255,255,255,0.6)', lineHeight: 1.6, marginBottom: '14px' }}>{t.desc}</p>
-              <div className="treatment-arrow" style={{ display: 'flex', alignItems: 'center', gap: '6px', color: '#00d4b1', fontFamily: 'Outfit', fontWeight: 600, fontSize: '13px' }}>Learn more →</div>
+              <div className="treatment-arrow" style={{ display: 'flex', alignItems: 'center', gap: '6px', color: '#00d4b1', fontFamily: 'Outfit', fontWeight: 600, fontSize: '13px' }}>Learn more &rarr;</div>
             </div>
           </div>
         ))}

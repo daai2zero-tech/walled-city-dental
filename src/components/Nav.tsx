@@ -27,7 +27,7 @@ export default function Nav() {
     <>
       <nav style={{
         position: 'fixed', top: '38px', left: 0, right: 0, zIndex: 100,
-        background: scrolled ? 'rgba(10,22,40,0.96)' : 'rgba(10,22,40,0.3)',
+        background: scrolled ? 'rgba(28,32,40,0.97)' : 'rgba(28,32,40,0.2)',
         backdropFilter: 'blur(20px)',
         borderBottom: scrolled ? '1px solid rgba(0,212,177,0.15)' : '1px solid transparent',
         transition: 'background 0.35s ease, border-color 0.35s ease',
@@ -73,7 +73,7 @@ export default function Nav() {
 
       <div style={{
         position: 'fixed', inset: 0, zIndex: 99,
-        background: '#0a1628',
+        background: '#1c2028',
         display: 'flex', flexDirection: 'column', justifyContent: 'flex-start',
         padding: '130px 40px 40px',
         opacity: menuOpen ? 1 : 0,

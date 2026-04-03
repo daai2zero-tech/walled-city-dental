@@ -4,7 +4,7 @@ export default function BookingCTA() {
   return (
     <section style={{
       position: 'relative', overflow: 'hidden',
-      background: '#0a1628',
+      background: '#1c2028',
       padding: '140px 24px',
       textAlign: 'center',
     }}>
@@ -15,7 +15,7 @@ export default function BookingCTA() {
           alt=""
           style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.12 }}
         />
-        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(10,22,40,0.97) 0%, rgba(10,22,40,0.85) 100%)' }} />
+        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(28,32,40,0.97) 0%, rgba(28,32,40,0.85) 100%)' }} />
       </div>
 
       {/* Teal glow */}

@@ -9,7 +9,7 @@ export default function Footer() {
   ]
 
   return (
-    <footer style={{ background: '#060e1c', borderTop: '1px solid rgba(0,212,177,0.1)', padding: '60px 24px 40px' }}>
+    <footer style={{ background: '#13161c', borderTop: '1px solid rgba(0,212,177,0.1)', padding: '60px 24px 40px' }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
         <div className="footer-grid" style={{ display: 'grid', gridTemplateColumns: '1.5fr 1fr 1fr', gap: '60px', marginBottom: '60px' }}>
 
@@ -45,7 +45,7 @@ export default function Footer() {
                 '12 Shipquay Street, Derry',
                 '028 7136 0000',
                 'hello@walledcitydental.co.uk',
-                'Mon–Fri: 9am–6pm',
+                'Mon\u2013Fri: 9am\u20136pm',
               ].map(item => (
                 <p key={item} style={{ fontFamily: 'Outfit', fontSize: '13px', color: 'rgba(255,255,255,0.4)', lineHeight: 1.5 }}>{item}</p>
               ))}
@@ -56,7 +56,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div style={{ borderTop: '1px solid rgba(255,255,255,0.06)', paddingTop: '24px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px' }}>
           <p style={{ fontFamily: 'Outfit', fontSize: '12px', color: 'rgba(255,255,255,0.2)' }}>
-            © 2025 Walled City Dental & Aesthetics. All rights reserved.
+            &copy; 2025 Walled City Dental & Aesthetics. All rights reserved.
           </p>
           <p style={{ fontFamily: 'Outfit', fontSize: '12px', color: 'rgba(255,255,255,0.2)' }}>
             Demo site built by{' '}

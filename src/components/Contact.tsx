@@ -24,7 +24,7 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" ref={sectionRef} style={{ background: '#0a1628', padding: '120px 0', position: 'relative', overflow: 'hidden' }}>
+    <section id="contact" ref={sectionRef} style={{ background: '#1c2028', padding: '120px 0', position: 'relative', overflow: 'hidden' }}>
       {/* Grid bg */}
       <div style={{ position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(circle, rgba(0,212,177,0.05) 1px, transparent 1px)', backgroundSize: '40px 40px', pointerEvents: 'none' }} />
 
@@ -53,7 +53,7 @@ export default function Contact() {
               { label: 'Address', value: '12 Shipquay Street, Derry / Londonderry, BT48 6DW' },
               { label: 'Phone', value: '028 7136 0000' },
               { label: 'Email', value: 'hello@walledcitydental.co.uk' },
-              { label: 'Opening Hours', value: 'Mon–Fri: 9am–6pm\nSat: 9am–2pm\nSun: Closed' },
+              { label: 'Opening Hours', value: 'Mon\u2013Fri: 9am\u20136pm\nSat: 9am\u20132pm\nSun: Closed' },
             ].map(item => (
               <div key={item.label} style={{ marginBottom: '28px', paddingBottom: '28px', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
                 <p style={{ fontFamily: 'Outfit', fontSize: '11px', color: '#00d4b1', letterSpacing: '0.15em', textTransform: 'uppercase', marginBottom: '6px' }}>{item.label}</p>
@@ -90,12 +90,12 @@ export default function Contact() {
                   onFocus={e => (e.target.style.borderColor = 'rgba(0,212,177,0.5)')}
                   onBlur={e => (e.target.style.borderColor = 'rgba(255,255,255,0.1)')}
                 >
-                  <option value="">Treatment of interest…</option>
+                  <option value="">Treatment of interest&hellip;</option>
                   {['Teeth Whitening', 'Composite Veneers', 'Invisalign', 'Dental Implants', 'Dermal Fillers', 'Anti-Wrinkle', 'General Dentistry', 'Other'].map(o => (
                     <option key={o} value={o}>{o}</option>
                   ))}
                 </select>
-                <textarea placeholder="Tell us a bit more about what you're looking for…" rows={4} style={{ ...inputStyle, resize: 'vertical' }}
+                <textarea placeholder="Tell us a bit more about what you're looking for&hellip;" rows={4} style={{ ...inputStyle, resize: 'vertical' }}
                   onFocus={e => (e.target.style.borderColor = 'rgba(0,212,177,0.5)')}
                   onBlur={e => (e.target.style.borderColor = 'rgba(255,255,255,0.1)')}
                 />

@@ -19,7 +19,7 @@ export default function Team() {
   }, [])
 
   return (
-    <section id="team" ref={sectionRef} style={{ background: '#0d1f35', padding: '120px 0' }}>
+    <section id="team" ref={sectionRef} style={{ background: '#181c24', padding: '120px 0' }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 24px' }}>
 
         {/* Header */}
@@ -44,7 +44,7 @@ export default function Team() {
               }}>
                 <img src={member.image} alt={member.name} style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top', transition: 'transform 0.5s ease' }} />
                 {/* Permanent bottom gradient */}
-                <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: '50%', background: 'linear-gradient(to top, rgba(10,22,40,0.9) 0%, transparent 100%)' }} />
+                <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: '50%', background: 'linear-gradient(to top, rgba(24,28,36,0.9) 0%, transparent 100%)' }} />
                 {/* Hover overlay */}
                 <div className="team-overlay">
                   <div style={{ width: '32px', height: '2px', background: '#00d4b1', marginBottom: '12px' }} />

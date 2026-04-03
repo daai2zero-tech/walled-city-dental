@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <section id="home" style={{
       minHeight: '100vh',
-      background: '#0a1628',
+      background: '#1c2028',
       display: 'flex',
       alignItems: 'center',
       paddingTop: '106px',
@@ -25,7 +25,7 @@ export default function Hero() {
         background: 'radial-gradient(circle, rgba(0,212,177,0.1) 0%, transparent 60%)',
         pointerEvents: 'none',
       }} />
-      {/* Subtle blue glow bottom-left */}
+      {/* Subtle glow bottom-left */}
       <div style={{
         position: 'absolute', bottom: '-200px', left: '-200px',
         width: '600px', height: '600px', borderRadius: '50%',
@@ -159,17 +159,25 @@ export default function Hero() {
             background: '#00d4b1', borderRadius: '16px', padding: '16px 20px',
             boxShadow: '0 8px 32px rgba(0,212,177,0.4)',
           }}>
-            <div style={{ fontFamily: 'Outfit', fontSize: '11px', color: 'rgba(10,22,40,0.6)', marginBottom: '4px', letterSpacing: '0.05em' }}>New Patients</div>
-            <div style={{ fontFamily: 'Outfit', fontWeight: 700, fontSize: '14px', color: '#0a1628' }}>Free Consultation</div>
+            <div style={{ fontFamily: 'Outfit', fontSize: '11px', color: 'rgba(28,32,40,0.55)', marginBottom: '4px', letterSpacing: '0.05em' }}>New Patients</div>
+            <div style={{ fontFamily: 'Outfit', fontWeight: 700, fontSize: '14px', color: '#1c2028' }}>Free Consultation</div>
           </div>
 
-          {/* Floating award badge */}
+          {/* Floating rating badge */}
           <div className="glass" style={{
             position: 'absolute', top: '180px', right: '-30px', zIndex: 3,
             padding: '12px 16px', borderRadius: '14px',
             display: 'flex', alignItems: 'center', gap: '10px',
           }}>
-            <div style={{ fontSize: '24px' }}>⭐</div>
+            <div style={{
+              width: '28px', height: '28px', borderRadius: '8px',
+              background: '#00d4b1',
+              display: 'flex', alignItems: 'center', justifyContent: 'center',
+            }}>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#1c2028">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+            </div>
             <div>
               <div style={{ fontFamily: 'Outfit', fontWeight: 700, fontSize: '13px', color: 'white' }}>5.0 Google</div>
               <div style={{ fontFamily: 'Outfit', fontSize: '11px', color: 'rgba(255,255,255,0.4)' }}>Rating</div>

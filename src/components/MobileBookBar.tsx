@@ -13,7 +13,7 @@ export default function MobileBookBar() {
   return (
     <div className="wcd-mobile-only" style={{
       position: 'fixed', bottom: 0, left: 0, right: 0, zIndex: 200,
-      background: '#0a1628',
+      background: '#1c2028',
       borderTop: '1px solid rgba(0,212,177,0.2)',
       padding: '12px 20px',
       display: 'flex', gap: '12px', alignItems: 'center',

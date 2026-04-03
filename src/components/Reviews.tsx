@@ -28,21 +28,21 @@ export default function Reviews() {
   }, [])
 
   return (
-    <section id="reviews" ref={sectionRef} style={{ background: '#f8fffe', padding: '120px 0', overflow: 'hidden' }}>
+    <section id="reviews" ref={sectionRef} style={{ background: '#f5f5f7', padding: '120px 0', overflow: 'hidden' }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 24px' }}>
 
         {/* Header */}
         <div className="reveal" style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', flexWrap: 'wrap', gap: '24px', marginBottom: '64px' }}>
           <div>
             <p style={{ fontFamily: 'Outfit', fontSize: '11px', fontWeight: 600, color: '#00d4b1', letterSpacing: '0.22em', textTransform: 'uppercase', marginBottom: '14px' }}>Patient Reviews</p>
-            <h2 style={{ fontFamily: 'Outfit', fontWeight: 900, fontSize: 'clamp(30px, 4vw, 52px)', color: '#0a1628', letterSpacing: '-0.025em', lineHeight: 1.05 }}>
+            <h2 style={{ fontFamily: 'Outfit', fontWeight: 900, fontSize: 'clamp(30px, 4vw, 52px)', color: '#1c2028', letterSpacing: '-0.025em', lineHeight: 1.05 }}>
               What our patients<br />say about us
             </h2>
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
             <div style={{ textAlign: 'center' }}>
               <div style={{ fontFamily: 'Outfit', fontWeight: 900, fontSize: '48px', color: '#00d4b1', letterSpacing: '-0.03em', lineHeight: 1 }}>5.0</div>
-              <div style={{ color: '#00d4b1', fontSize: '18px', marginTop: '4px' }}>★★★★★</div>
+              <div style={{ color: '#00d4b1', fontSize: '18px', marginTop: '4px' }}>&#9733;&#9733;&#9733;&#9733;&#9733;</div>
               <div style={{ fontFamily: 'Outfit', fontSize: '12px', color: '#94a3b8', marginTop: '4px' }}>Google Reviews</div>
             </div>
           </div>
@@ -50,7 +50,7 @@ export default function Reviews() {
 
         {/* Featured review — large */}
         <div className="reveal" style={{
-          background: '#0a1628', borderRadius: '28px', padding: '56px 64px',
+          background: '#1c2028', borderRadius: '28px', padding: '56px 64px',
           position: 'relative', overflow: 'hidden', marginBottom: '32px',
         }}>
           <div style={{ position: 'absolute', top: '-20px', left: '40px', fontFamily: 'Georgia, serif', fontSize: '160px', color: 'rgba(0,212,177,0.08)', lineHeight: 1, userSelect: 'none' }}>&ldquo;</div>
@@ -59,19 +59,19 @@ export default function Reviews() {
               &ldquo;{reviews[active].text}&rdquo;
             </p>
             <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
-              <div style={{ width: '44px', height: '44px', borderRadius: '50%', background: '#00d4b1', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'Outfit', fontWeight: 700, fontSize: '16px', color: '#0a1628' }}>
+              <div style={{ width: '44px', height: '44px', borderRadius: '50%', background: '#00d4b1', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'Outfit', fontWeight: 700, fontSize: '16px', color: '#1c2028' }}>
                 {reviews[active].name[0]}
               </div>
               <div>
                 <div style={{ fontFamily: 'Outfit', fontWeight: 700, fontSize: '15px', color: 'white' }}>{reviews[active].name}</div>
                 <div style={{ fontFamily: 'Outfit', fontSize: '12px', color: '#00d4b1', marginTop: '2px' }}>{reviews[active].treatment}</div>
               </div>
-              <div style={{ marginLeft: 'auto', color: '#00d4b1', fontSize: '16px' }}>★★★★★</div>
+              <div style={{ marginLeft: 'auto', color: '#00d4b1', fontSize: '16px' }}>&#9733;&#9733;&#9733;&#9733;&#9733;</div>
             </div>
           </div>
         </div>
 
-        {/* Dots + mini previews */}
+        {/* Dots */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
           {reviews.map((_, i) => (
             <button key={i} onClick={() => setActive(i)} style={{

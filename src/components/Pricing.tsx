@@ -41,7 +41,7 @@ export default function Pricing() {
   }, [])
 
   return (
-    <section id="pricing" ref={sectionRef} style={{ background: '#0a1628', padding: '120px 0', position: 'relative', overflow: 'hidden' }}>
+    <section id="pricing" ref={sectionRef} style={{ background: '#1c2028', padding: '120px 0', position: 'relative', overflow: 'hidden' }}>
       {/* Background glow */}
       <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)', width: '800px', height: '600px', borderRadius: '50%', background: 'radial-gradient(circle, rgba(0,212,177,0.05) 0%, transparent 70%)', pointerEvents: 'none' }} />
 
@@ -76,7 +76,7 @@ export default function Pricing() {
               {plan.highlight && (
                 <>
                   <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '3px', background: 'linear-gradient(to right, #00d4b1, #7feee4)' }} />
-                  <div style={{ display: 'inline-block', background: '#00d4b1', color: '#0a1628', fontFamily: 'Outfit', fontWeight: 700, fontSize: '10px', letterSpacing: '0.12em', textTransform: 'uppercase', padding: '4px 14px', borderRadius: '100px', marginBottom: '20px' }}>Most Popular</div>
+                  <div style={{ display: 'inline-block', background: '#00d4b1', color: '#1c2028', fontFamily: 'Outfit', fontWeight: 700, fontSize: '10px', letterSpacing: '0.12em', textTransform: 'uppercase', padding: '4px 14px', borderRadius: '100px', marginBottom: '20px' }}>Most Popular</div>
                 </>
               )}
               <p style={{ fontFamily: 'Outfit', fontSize: '11px', color: 'rgba(255,255,255,0.4)', letterSpacing: '0.15em', textTransform: 'uppercase', marginBottom: '6px' }}>{plan.tagline}</p>
@@ -88,7 +88,7 @@ export default function Pricing() {
               <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '32px' }}>
                 {plan.items.map(item => (
                   <li key={item} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
-                    <span style={{ color: '#00d4b1', fontWeight: 700, flexShrink: 0, marginTop: '1px' }}>✓</span>
+                    <span style={{ color: '#00d4b1', fontWeight: 700, flexShrink: 0, marginTop: '1px' }}>&#10003;</span>
                     <span style={{ fontFamily: 'Outfit', fontSize: '14px', color: 'rgba(255,255,255,0.65)', lineHeight: 1.5 }}>{item}</span>
                   </li>
                 ))}
