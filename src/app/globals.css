@@ -1,0 +1,179 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Outfit', sans-serif; color: #0a1628; background: white; }
+
+/* ── Scroll reveal ───────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.visible { opacity: 1; transform: none; }
+.reveal-left  { opacity: 0; transform: translateX(-40px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal-right { opacity: 0; transform: translateX(40px);  transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal-left.visible, .reveal-right.visible { opacity: 1; transform: none; }
+.d1 { transition-delay: 0.1s; }
+.d2 { transition-delay: 0.2s; }
+.d3 { transition-delay: 0.3s; }
+.d4 { transition-delay: 0.4s; }
+.d5 { transition-delay: 0.5s; }
+
+/* ── Image zoom on hover ─────────────────────────── */
+.img-zoom { overflow: hidden; }
+.img-zoom img { transition: transform 0.65s ease; will-change: transform; }
+.img-zoom:hover img { transform: scale(1.07); }
+
+/* ── Card hover lift ─────────────────────────────── */
+.card-lift { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.card-lift:hover { transform: translateY(-10px); box-shadow: 0 24px 60px rgba(0,212,177,0.18) !important; }
+
+/* ── Buttons ─────────────────────────────────────── */
+.btn-teal {
+  background: #00d4b1;
+  color: #0a1628;
+  font-weight: 700;
+  padding: 14px 32px;
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
+  font-family: 'Outfit', sans-serif;
+  font-size: 15px;
+  letter-spacing: 0.01em;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 24px rgba(0,212,177,0.35);
+  white-space: nowrap;
+}
+.btn-teal:hover {
+  background: #00f0c8;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(0,212,177,0.5);
+}
+.btn-outline-white {
+  background: transparent;
+  color: white;
+  font-weight: 600;
+  padding: 13px 32px;
+  border-radius: 100px;
+  border: 2px solid rgba(255,255,255,0.35);
+  cursor: pointer;
+  font-family: 'Outfit', sans-serif;
+  font-size: 15px;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+.btn-outline-white:hover {
+  border-color: rgba(255,255,255,0.8);
+  background: rgba(255,255,255,0.08);
+}
+.btn-outline-teal {
+  background: transparent;
+  color: #00d4b1;
+  font-weight: 600;
+  padding: 13px 32px;
+  border-radius: 100px;
+  border: 2px solid rgba(0,212,177,0.4);
+  cursor: pointer;
+  font-family: 'Outfit', sans-serif;
+  font-size: 15px;
+  transition: all 0.25s ease;
+}
+.btn-outline-teal:hover {
+  background: rgba(0,212,177,0.08);
+  border-color: #00d4b1;
+}
+
+/* ── Ticker ──────────────────────────────────────── */
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.ticker-track {
+  animation: ticker 28s linear infinite;
+  display: flex;
+  width: max-content;
+}
+.ticker-track:hover { animation-play-state: paused; }
+
+/* ── Pulse dot ───────────────────────────────────── */
+@keyframes pulseDot {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(0,212,177,0.5); }
+  50% { box-shadow: 0 0 0 8px rgba(0,212,177,0); }
+}
+.pulse-dot { animation: pulseDot 2s ease infinite; }
+
+/* ── Team card hover reveal ──────────────────────── */
+.team-card .team-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(10,22,40,0.97) 0%, rgba(10,22,40,0.7) 50%, transparent 100%);
+  display: flex; flex-direction: column; justify-content: flex-end;
+  padding: 28px 24px;
+  transform: translateY(30px);
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+.team-card:hover .team-overlay { opacity: 1; transform: none; }
+.team-card:hover img { transform: scale(1.05); }
+
+/* ── Treatment card ──────────────────────────────── */
+.treatment-card .treatment-overlay {
+  position: absolute; inset: 0;
+  display: flex; flex-direction: column; justify-content: flex-end;
+  padding: 28px;
+  background: linear-gradient(to top, rgba(10,22,40,0.92) 0%, rgba(10,22,40,0.3) 60%, transparent 100%);
+  transition: background 0.4s ease;
+}
+.treatment-card:hover .treatment-overlay {
+  background: linear-gradient(to top, rgba(10,22,40,0.97) 0%, rgba(10,22,40,0.6) 60%, rgba(0,212,177,0.08) 100%);
+}
+.treatment-card .treatment-arrow {
+  opacity: 0;
+  transform: translateX(-8px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.treatment-card:hover .treatment-arrow {
+  opacity: 1;
+  transform: none;
+}
+
+/* ── Glassmorphism ───────────────────────────────── */
+.glass {
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 20px;
+}
+
+/* ── Nav link underline ──────────────────────────── */
+.nav-link {
+  position: relative;
+  color: rgba(255,255,255,0.65);
+  text-decoration: none;
+  font-family: 'Outfit', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 100px;
+  transition: color 0.2s, background 0.2s;
+}
+.nav-link:hover { color: #00d4b1; background: rgba(0,212,177,0.08); }
+
+/* ── Responsive grid helpers ─────────────────────── */
+@media (max-width: 767px) {
+  .wcd-desktop { display: none !important; }
+  .hero-grid { grid-template-columns: 1fr !important; }
+  .hero-image-col { display: none !important; }
+  .treatments-grid { grid-template-columns: 1fr !important; }
+  .why-grid { grid-template-columns: 1fr 1fr !important; }
+  .pricing-grid { grid-template-columns: 1fr !important; }
+  .team-grid { grid-template-columns: 1fr 1fr !important; }
+  .contact-grid { grid-template-columns: 1fr !important; }
+  .footer-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
+  .reviews-grid { grid-template-columns: 1fr !important; }
+}
+@media (min-width: 768px) {
+  .wcd-hamburger { display: none !important; }
+  .wcd-mobile-only { display: none !important; }
+}
