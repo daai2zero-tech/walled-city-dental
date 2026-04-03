@@ -109,7 +109,7 @@ export default function WhyChooseUs() {
         {/* Features grid */}
         <div className="why-grid" style={{ gap: '24px' }}>
           {features.map((f, i) => (
-            <div key={f.title} className={`reveal card-lift d${i + 1}`} style={{
+            <div key={f.title} className={`reveal card-lift d${i + 1} why-card`} style={{
               background: '#f8fffe',
               border: '1px solid rgba(0,212,177,0.15)',
               borderRadius: '20px', padding: '32px',
@@ -118,7 +118,7 @@ export default function WhyChooseUs() {
             onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = 'rgba(0,212,177,0.4)' }}
             onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = 'rgba(0,212,177,0.15)' }}
             >
-              <div style={{
+              <div className="why-icon" style={{
                 width: '44px', height: '44px', borderRadius: '12px',
                 background: 'rgba(0,212,177,0.12)',
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
@@ -126,8 +126,10 @@ export default function WhyChooseUs() {
               }}>
                 {f.icon}
               </div>
-              <h3 style={{ fontFamily: 'Outfit', fontWeight: 700, fontSize: '18px', color: '#1c2028', marginBottom: '10px', letterSpacing: '-0.01em' }}>{f.title}</h3>
-              <p style={{ fontFamily: 'Outfit', fontSize: '14px', color: '#64748b', lineHeight: 1.7 }}>{f.desc}</p>
+              <div className="why-text">
+                <h3 style={{ fontFamily: 'Outfit', fontWeight: 700, fontSize: '18px', color: '#1c2028', marginBottom: '10px', letterSpacing: '-0.01em' }}>{f.title}</h3>
+                <p style={{ fontFamily: 'Outfit', fontSize: '14px', color: '#64748b', lineHeight: 1.7 }}>{f.desc}</p>
+              </div>
             </div>
           ))}
         </div>
